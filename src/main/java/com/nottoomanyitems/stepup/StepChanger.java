@@ -1,6 +1,5 @@
 package com.nottoomanyitems.stepup;
 
-import de.guntram.mcmod.fabrictools.KeyBindingHandler;
 import net.fabricmc.fabric.api.client.keybinding.FabricKeyBinding;
 import net.fabricmc.fabric.api.client.keybinding.KeyBindingRegistry;
 import net.fabricmc.fabric.api.event.client.ClientTickCallback;
@@ -8,12 +7,13 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.resource.language.I18n;
 import net.minecraft.client.util.InputUtil;
-import net.minecraft.text.StringTextComponent;
-import net.minecraft.text.TextFormat;
+import net.minecraft.text.LiteralText;
+import net.minecraft.client.util.TextFormat;
 import net.minecraft.util.Identifier;
+
 import static org.lwjgl.glfw.GLFW.GLFW_KEY_J;
 
-public final class StepChanger implements KeyBindingHandler, ClientTickCallback {
+public final class StepChanger implements ClientTickCallback {
     public FabricKeyBinding myKey;
     public static int autoJumpState = -1; //0 StepUp, 1 None, 2 Minecraft
     public static boolean firstRun = true;
@@ -37,6 +37,7 @@ public final class StepChanger implements KeyBindingHandler, ClientTickCallback 
         player = client.player;
         if (player==null)
             return;
+        processKeyBinds();
         if(player.isSneaking()) {
         	player.stepHeight = .6f;
         }else if(autoJumpState == 0 && player.stepHeight < 1.0f){
@@ -54,7 +55,6 @@ public final class StepChanger implements KeyBindingHandler, ClientTickCallback 
         }
     }
 
-    @Override
     public void processKeyBinds() {
         if (myKey.wasPressed()) {
             if(autoJumpState == 0){
@@ -64,7 +64,6 @@ public final class StepChanger implements KeyBindingHandler, ClientTickCallback 
             }else if(autoJumpState == 2){
             	autoJumpState = 0;
             }
-            autoJump();
             message();
             ConfigHandler.changeConfig();
         }
@@ -88,7 +87,7 @@ public final class StepChanger implements KeyBindingHandler, ClientTickCallback 
     	}else if(autoJumpState == 2) {
     		m = m + (Object)TextFormat.GREEN + I18n.translate("mod.stepup.minecraft") + " " + I18n.translate("mod.stepup.autojump") + " " + I18n.translate("mod.stepup.enabled");
     	}
-        mc.player.sendMessage(new StringTextComponent(m));
+        mc.player.sendMessage(new LiteralText(m));
     }
 }
 
