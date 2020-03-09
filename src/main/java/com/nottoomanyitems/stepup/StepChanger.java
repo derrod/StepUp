@@ -8,7 +8,7 @@ import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.resource.language.I18n;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.text.LiteralText;
-import net.minecraft.client.util.TextFormat;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 
 import static org.lwjgl.glfw.GLFW.GLFW_KEY_J;
@@ -57,13 +57,7 @@ public final class StepChanger implements ClientTickCallback {
 
     public void processKeyBinds() {
         if (myKey.wasPressed()) {
-            if(autoJumpState == 0){
-            	autoJumpState = 1;
-            }else if(autoJumpState == 1){
-            	autoJumpState = 2;
-            }else if(autoJumpState == 2){
-            	autoJumpState = 0;
-            }
+            autoJumpState = ( autoJumpState + 1 ) % 3;
             message();
             ConfigHandler.changeConfig();
         }
@@ -79,15 +73,14 @@ public final class StepChanger implements ClientTickCallback {
     }
     
     private void message() {
-    	String m = (Object)TextFormat.DARK_AQUA + "[" + (Object)TextFormat.YELLOW + "StepUp" + (Object)TextFormat.DARK_AQUA + "]" + " ";
+    	String m = Formatting.DARK_AQUA + "[" + Formatting.YELLOW + "StepUp" + Formatting.DARK_AQUA + "]" + " ";
     	if(autoJumpState == 0) {
-    		m = m + (Object)TextFormat.GREEN + I18n.translate("mod.stepup.enabled");
+    		m = m + Formatting.GREEN + I18n.translate("mod.stepup.enabled");
     	}else if(autoJumpState == 1) {
-    		m = m + (Object)TextFormat.RED + I18n.translate("mod.stepup.disabled");
+    		m = m + Formatting.RED + I18n.translate("mod.stepup.disabled");
     	}else if(autoJumpState == 2) {
-    		m = m + (Object)TextFormat.GREEN + I18n.translate("mod.stepup.minecraft") + " " + I18n.translate("mod.stepup.autojump") + " " + I18n.translate("mod.stepup.enabled");
+    		m = m + Formatting.GREEN + I18n.translate("mod.stepup.minecraft") + " " + I18n.translate("mod.stepup.autojump") + " " + I18n.translate("mod.stepup.enabled");
     	}
         mc.player.sendMessage(new LiteralText(m));
     }
 }
-
