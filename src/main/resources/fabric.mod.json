@@ -1,7 +1,7 @@
 {
     "schemaVersion": 1,
     "id": "stepup",
-    "version": "11.14-fabric0.2.7-1.0.2",
+    "version": "${version}",
     "environment": "client",
     "entrypoints": {
         "client": [ "com.nottoomanyitems.stepup.Main" ],
