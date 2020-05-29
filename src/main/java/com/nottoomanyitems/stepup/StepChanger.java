@@ -10,7 +10,6 @@ import net.minecraft.client.util.InputUtil;
 import net.minecraft.text.LiteralText;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
-
 import static org.lwjgl.glfw.GLFW.GLFW_KEY_J;
 
 public final class StepChanger implements ClientTickCallback {
@@ -81,6 +80,6 @@ public final class StepChanger implements ClientTickCallback {
     	}else if(autoJumpState == 2) {
     		m = m + Formatting.GREEN + I18n.translate("mod.stepup.minecraft") + " " + I18n.translate("mod.stepup.autojump") + " " + I18n.translate("mod.stepup.enabled");
     	}
-        mc.player.sendMessage(new LiteralText(m));
+        mc.player.sendMessage(new LiteralText(m), false);
     }
 }
