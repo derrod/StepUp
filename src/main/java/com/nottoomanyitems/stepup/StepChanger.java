@@ -16,7 +16,7 @@ public final class StepChanger implements ClientTickCallback {
     public FabricKeyBinding myKey;
     public static int autoJumpState = -1; //0 StepUp, 1 None, 2 Minecraft
     public static boolean firstRun = true;
-    public static String serverIP;
+    public static String serverName;
     
     private MinecraftClient mc;
 
@@ -39,11 +39,11 @@ public final class StepChanger implements ClientTickCallback {
         processKeyBinds();
         if(player.isSneaking()) {
         	player.stepHeight = .6f;
-        }else if(autoJumpState == 0 && player.stepHeight < 1.0f){
+        } else if(autoJumpState == 0 && player.stepHeight < 1.0f){
         	player.stepHeight = 1.25f;
-        }else if(autoJumpState == 1 && player.stepHeight >= 1.0f){
+        } else if(autoJumpState == 1 && player.stepHeight >= 1.0f){
         	player.stepHeight = .6f;
-        }else if(autoJumpState == 2 && player.stepHeight >= 1.0f){
+        } else if(autoJumpState == 2 && player.stepHeight >= 1.0f){
         	player.stepHeight = .6f;
         }
         autoJump();

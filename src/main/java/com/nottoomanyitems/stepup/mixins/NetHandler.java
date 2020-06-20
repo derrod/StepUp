@@ -18,8 +18,8 @@ public class NetHandler {
     private void onConnectedToServerEvent(GameJoinS2CPacket packet, CallbackInfo cbi) {
         MinecraftClient mc=MinecraftClient.getInstance();
         ServerInfo serverData = mc.getCurrentServerEntry();
-        StepChanger.serverIP = serverData != null ? serverData.address.replace(".", "") : "0000";
-        System.out.println("connected to "+StepChanger.serverIP);
+        StepChanger.serverName = serverData != null ? serverData.name : "localserver";
+        System.out.println("connected to "+StepChanger.serverName);
         StepChanger.firstRun = true;
         ConfigHandler.loadConfig();
     }

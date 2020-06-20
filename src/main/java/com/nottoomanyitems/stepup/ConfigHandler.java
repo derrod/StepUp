@@ -19,14 +19,14 @@ public class ConfigHandler implements ModConfigurationHandler {
     }
 
     public static void loadConfig() {
-    	StepChanger.autoJumpState = config.getInt(StepChanger.serverIP,
+    	StepChanger.autoJumpState = config.getInt(StepChanger.serverName,
                 Configuration.CATEGORY_CLIENT, 0, 0, 2, "autoJump state on this server");
-        System.out.println("setting state on "+StepChanger.serverIP+" to "+StepChanger.autoJumpState);
+        System.out.println("setting state on "+StepChanger.serverName+" to "+StepChanger.autoJumpState);
         ConfigHandler.reloadConfig();
     }
 
     public static void changeConfig() {
-        config.setValue(StepChanger.serverIP, StepChanger.autoJumpState);
+        config.setValue(StepChanger.serverName, StepChanger.autoJumpState);
         ConfigHandler.reloadConfig();
     }
 
