@@ -24,8 +24,8 @@
     "icon": "pack.png",
     "authors": [ "NotTooManyItems" ],
     "contact": {
-        "homepage": "https://minecraft.curseforge.com/projects/stepup",
-        "sources": "https://github.com/NotTooManyItems/StepUp",
-        "issues": "https://github.com/NotTooManyItems/StepUp/issues"
+        "homepage": "https://www.curseforge.com/minecraft/mc-mods/stepupnext",
+        "sources": "https://github.com/gbl/StepUp",
+        "issues": "https://github.com/gbl/StepUp/issues"
     }
 }
