@@ -21,8 +21,8 @@
     },
     "name": "StepUp",
     "description": "Quickly switch betwenn autojump and different step heights",
-    "icon": "pack.png",
-    "authors": [ "NotTooManyItems" ],
+    "icon": "icon.png",
+    "authors": [ "NotTooManyItems", "Giselbaer" ],
     "contact": {
         "homepage": "https://www.curseforge.com/minecraft/mc-mods/stepupnext",
         "sources": "https://github.com/gbl/StepUp",
