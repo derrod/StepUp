@@ -8,7 +8,11 @@
         "modmenu": [ "com.nottoomanyitems.stepup.MMConfigurationHandler" ]
     },
     "custom": {
-        "modmenu:clientsideOnly": true
+        "modmenu:clientsideOnly": true,
+        "modupdater": {
+            "strategy": "json",
+            "url": "https://raw.githubusercontent.com/gbl/ModVersionInfo/master/StepUp.json"
+        }
     },
     "mixins": [
       	"mixins.stepup.json"
@@ -17,7 +21,8 @@
       "fabric": "*"
     },
     "recommends": {
-      "modmenu" : "*"
+        "modmenu" : "*",
+        "modupdater": ">=1.1.7"
     },
     "name": "StepUp",
     "description": "Quickly switch betwenn autojump and different step heights",
