@@ -2,7 +2,7 @@ package com.nottoomanyitems.stepup;
 
 import de.guntram.mcmod.fabrictools.ConfigurationProvider;
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.event.client.ClientTickCallback;
+import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 
 public class Main implements ClientModInitializer {
     
@@ -14,6 +14,6 @@ public class Main implements ClientModInitializer {
         ConfigHandler.load(ConfigurationProvider.getSuggestedFile("stepup"));
         StepChanger stepChanger = new StepChanger();
         stepChanger.setKeyBindings();
-        ClientTickCallback.EVENT.register(stepChanger);
+        ClientTickEvents.END_CLIENT_TICK.register(stepChanger);
     }
 }

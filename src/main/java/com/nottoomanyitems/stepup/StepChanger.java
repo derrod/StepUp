@@ -1,19 +1,18 @@
 package com.nottoomanyitems.stepup;
 
-import net.fabricmc.fabric.api.client.keybinding.FabricKeyBinding;
-import net.fabricmc.fabric.api.client.keybinding.KeyBindingRegistry;
-import net.fabricmc.fabric.api.event.client.ClientTickCallback;
+import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents.EndTick;
+import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerEntity;
+import net.minecraft.client.options.KeyBinding;
 import net.minecraft.client.resource.language.I18n;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.text.LiteralText;
 import net.minecraft.util.Formatting;
-import net.minecraft.util.Identifier;
 import static org.lwjgl.glfw.GLFW.GLFW_KEY_J;
 
-public final class StepChanger implements ClientTickCallback {
-    public FabricKeyBinding myKey;
+public final class StepChanger implements EndTick {
+    public KeyBinding myKey;
     public static int autoJumpState = -1; //0 StepUp, 1 None, 2 Minecraft
     public static boolean firstRun = true;
     public static String serverName;
@@ -22,15 +21,11 @@ public final class StepChanger implements ClientTickCallback {
 
     public void setKeyBindings() {
         final String category="key.categories.stepup";
-        KeyBindingRegistry.INSTANCE.addCategory(category);
-        KeyBindingRegistry.INSTANCE.register(
-            myKey=FabricKeyBinding.Builder
-                .create(new Identifier("stepup:toggle"), InputUtil.Type.KEYSYM, GLFW_KEY_J, category)
-                .build());        
+        KeyBindingHelper.registerKeyBinding(myKey = new KeyBinding("key.stepup.toggle", InputUtil.Type.KEYSYM, GLFW_KEY_J, category));
     }
 
     @Override
-    public void tick(MinecraftClient client) {
+    public void onEndTick(MinecraftClient client) {
         ClientPlayerEntity player;
         mc=client;      // can't do this in onInit because mixins need to be applied first
         player = client.player;
