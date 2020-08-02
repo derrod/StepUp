@@ -1,0 +1,10 @@
+{
+    "mod.stepup.minecraft":"原版",
+    "mod.stepup.autojump":"自动跳跃",
+    "mod.stepup.enabled":"已启用",
+    "mod.stepup.disabled":"已禁用",
+    "mod.stepup.updateAvailable":"现有可用的更新",
+    "mod.stepup.updateTooltip":"点击此处以访问官网下载更新",
+    "key.categories.stepup" : "抬步 (StepUp)",
+    "key.stepup.toggle" : "切换模式"
+}
