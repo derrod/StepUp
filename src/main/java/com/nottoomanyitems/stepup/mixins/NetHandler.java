@@ -21,6 +21,6 @@ public class NetHandler {
         StepChanger.serverName = serverData != null ? serverData.name : "localserver";
         System.out.println("connected to "+StepChanger.serverName);
         StepChanger.firstRun = true;
-        ConfigHandler.loadConfig();
+        ConfigHandler.loadConfigForServer(StepChanger.serverName);
     }
 }
