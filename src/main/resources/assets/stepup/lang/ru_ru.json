@@ -6,10 +6,10 @@
     "mod.stepup.updateAvailable": "Доступно обновление",
     "mod.stepup.updateTooltip": "Нажмите здесь, чтобы скачать обновление с официального сайта",
     "key.categories.stepup": "StepUp",
-    "key.stepup.toggle": "Toggle",
-    "mod.stepup.config.default": "Default on new servers",
-    "mod.stepup.config.dostepup": "§aStepUp enabled",
-    "mod.stepup.config.nostepup": "§cStepUp disabled",
-    "mod.stepup.config.vanillajump": "§eUse Vanilla Auto Jump",
-    "mod.stepup.config.tt.onthisserver": "Stepup behavior on this server"
+    "key.stepup.toggle": "Переключить режим",
+    "mod.stepup.config.default": "По умолчанию на новых серверах",
+    "mod.stepup.config.dostepup": "§aStepUp включен",
+    "mod.stepup.config.nostepup": "§cStepUp отключен",
+    "mod.stepup.config.vanillajump": "§eИспользовать стандартный Авто Прыжок",
+    "mod.stepup.config.tt.onthisserver": "Использовать настройки StepUp сервера"
 }
