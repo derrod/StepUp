@@ -1,15 +1,15 @@
 {
     "mod.stepup.minecraft": "Varsayılan",
-    "mod.stepup.autojump": "Oto Zıplama",
-    "mod.stepup.enabled": "Etkinleştirildi",
-    "mod.stepup.disabled": "Devre dışı bırakıldı",
+    "mod.stepup.autojump": "Otomatik Zıplama",
+    "mod.stepup.enabled": "Etkin",
+    "mod.stepup.disabled": "Devre dışı",
     "mod.stepup.updateAvailable": "Güncelleme Mevcut",
     "mod.stepup.updateTooltip": "Resmi siteden güncellemek için buraya tıklayın",
     "key.categories.stepup": "YüksekAdım",
     "key.stepup.toggle": "Aç/Kapat",
-    "mod.stepup.config.default": "Default on new servers",
-    "mod.stepup.config.dostepup": "§aStepUp enabled",
-    "mod.stepup.config.nostepup": "§cStepUp disabled",
-    "mod.stepup.config.vanillajump": "§eUse Vanilla Auto Jump",
-    "mod.stepup.config.tt.onthisserver": "Stepup behavior on this server"
+    "mod.stepup.config.default": "Yeni sunucularda varsayılan olarak aç",
+    "mod.stepup.config.dostepup": "§aStepUp etkinleştirildi",
+    "mod.stepup.config.nostepup": "§cStepUp devre dışı bırakıldı",
+    "mod.stepup.config.vanillajump": "§eVanilla Otomatik Zıplamayı Kullan",
+    "mod.stepup.config.tt.onthisserver": "Bu sunucudaki Stepup davranışı"
 }
