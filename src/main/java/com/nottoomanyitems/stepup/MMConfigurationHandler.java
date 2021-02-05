@@ -16,11 +16,6 @@ public class MMConfigurationHandler implements ModMenuApi
     }
 
     @Override
-    public Optional<Supplier<Screen>> getConfigScreen(Screen screen) {
-        return Optional.of(new GuiModOptions(screen, "StepUp", ConfigurationProvider.getHandler("StepUp")));
-    }
-    
-    @Override
     public ConfigScreenFactory getModConfigScreenFactory() {
         return screen -> new GuiModOptions(screen, Main.MODNAME, ConfigurationProvider.getHandler(Main.MODNAME));
     }
