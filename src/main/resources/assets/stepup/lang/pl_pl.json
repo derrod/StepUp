@@ -1,15 +1,15 @@
 {
     "mod.stepup.minecraft": "Vanilla",
-    "mod.stepup.autojump": "Auto Jump",
-    "mod.stepup.enabled": "Enabled",
-    "mod.stepup.disabled": "Disabled",
-    "mod.stepup.updateAvailable": "Update Available",
-    "mod.stepup.updateTooltip": "Click here to update from official website",
+    "mod.stepup.autojump": "Auto-skok",
+    "mod.stepup.enabled": "Włączone",
+    "mod.stepup.disabled": "Wyłączone",
+    "mod.stepup.updateAvailable": "Aktualizacja dostępna",
+    "mod.stepup.updateTooltip": "Kliknij tutaj, aby zaktualizować z oficjalnej strony",
     "key.categories.stepup": "StepUp",
-    "key.stepup.toggle": "Toggle",
-    "mod.stepup.config.default": "Default on new servers",
-    "mod.stepup.config.dostepup": "§aStepUp enabled",
-    "mod.stepup.config.nostepup": "§cStepUp disabled",
-    "mod.stepup.config.vanillajump": "§eUse Vanilla Auto Jump",
-    "mod.stepup.config.tt.onthisserver": "Stepup behavior on this server"
+    "key.stepup.toggle": "Przełącz",
+    "mod.stepup.config.default": "Domyślne na nowych serwerach",
+    "mod.stepup.config.dostepup": "§aStepUp włączony",
+    "mod.stepup.config.nostepup": "§cStepUp wyłączony",
+    "mod.stepup.config.vanillajump": "§eUżyj podstawowego Auto-skoku",
+    "mod.stepup.config.tt.onthisserver": "Zachowanie modyfikacji na tym serwerze"
 }
