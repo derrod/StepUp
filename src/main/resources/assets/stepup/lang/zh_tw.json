@@ -1,15 +1,15 @@
 {
-    "mod.stepup.minecraft": "Vanilla",
-    "mod.stepup.autojump": "Auto Jump",
-    "mod.stepup.enabled": "Enabled",
-    "mod.stepup.disabled": "Disabled",
-    "mod.stepup.updateAvailable": "Update Available",
-    "mod.stepup.updateTooltip": "Click here to update from official website",
+    "mod.stepup.minecraft": "原版",
+    "mod.stepup.autojump": "自動跳躍",
+    "mod.stepup.enabled": "已啟用",
+    "mod.stepup.disabled": "已停用",
+    "mod.stepup.updateAvailable": "有可用的更新",
+    "mod.stepup.updateTooltip": "點擊此處以訪問官網下載更新",
     "key.categories.stepup": "StepUp",
-    "key.stepup.toggle": "Toggle",
-    "mod.stepup.config.default": "Default on new servers",
-    "mod.stepup.config.dostepup": "§aStepUp enabled",
-    "mod.stepup.config.nostepup": "§cStepUp disabled",
-    "mod.stepup.config.vanillajump": "§eUse Vanilla Auto Jump",
-    "mod.stepup.config.tt.onthisserver": "Stepup behavior on this server"
+    "key.stepup.toggle": "切換",
+    "mod.stepup.config.default": "加入新伺服器時的默認設定",
+    "mod.stepup.config.dostepup": "§aStepUp 已啟用",
+    "mod.stepup.config.nostepup": "§aStepUp 已停用",
+    "mod.stepup.config.vanillajump": "§e使用原版自動跳躍",
+    "mod.stepup.config.tt.onthisserver": "在伺服器上使用Stepup"
 }
