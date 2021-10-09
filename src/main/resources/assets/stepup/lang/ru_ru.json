@@ -1,15 +1,15 @@
 {
     "mod.stepup.minecraft": "Стандартный",
-    "mod.stepup.autojump": "Авто Прыжок",
-    "mod.stepup.enabled": "Включен",
+    "mod.stepup.autojump": "Автопрыжок",
+    "mod.stepup.enabled": "Включён",
     "mod.stepup.disabled": "Выключен",
     "mod.stepup.updateAvailable": "Доступно обновление",
     "mod.stepup.updateTooltip": "Нажмите здесь, чтобы скачать обновление с официального сайта",
     "key.categories.stepup": "StepUp",
     "key.stepup.toggle": "Переключить режим",
     "mod.stepup.config.default": "По умолчанию на новых серверах",
-    "mod.stepup.config.dostepup": "§aStepUp включен",
-    "mod.stepup.config.nostepup": "§cStepUp отключен",
-    "mod.stepup.config.vanillajump": "§eИспользовать стандартный Авто Прыжок",
-    "mod.stepup.config.tt.onthisserver": "Использовать настройки StepUp сервера"
+    "mod.stepup.config.dostepup": "§aStepUp включён",
+    "mod.stepup.config.nostepup": "§cStepUp отключён",
+    "mod.stepup.config.vanillajump": "§eИспользовать ванильный автопрыжок",
+    "mod.stepup.config.tt.onthisserver": "Поведение StepUp на этом сервере"
 }
