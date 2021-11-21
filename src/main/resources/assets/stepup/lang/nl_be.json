@@ -1,0 +1,15 @@
+{
+    "mod.stepup.minecraft": "Vanilla",
+    "mod.stepup.autojump": "Automatisch Springen",
+    "mod.stepup.enabled": "Aan",
+    "mod.stepup.disabled": "Uit",
+    "mod.stepup.updateAvailable": "Update beschikbaar",
+    "mod.stepup.updateTooltip": "Klik hier om bij te werken vanaf de officiële website",
+    "key.categories.stepup": "StepUp",
+    "key.stepup.toggle": "Wissel",
+    "mod.stepup.config.default": "Standaard op nieuwe servers",
+    "mod.stepup.config.dostepup": "§aStepUp aan",
+    "mod.stepup.config.nostepup": "§cStepUp uit",
+    "mod.stepup.config.vanillajump": "§eGebruik vanilla automatisch springen",
+    "mod.stepup.config.tt.onthisserver": "Stepup gedrag op deze server"
+}
