@@ -5,9 +5,10 @@ import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.option.KeyBinding;
+import net.minecraft.client.option.SimpleOption;
 import net.minecraft.client.resource.language.I18n;
 import net.minecraft.client.util.InputUtil;
-import net.minecraft.text.LiteralText;
+import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import static org.lwjgl.glfw.GLFW.GLFW_KEY_J;
 
@@ -58,11 +59,12 @@ public final class StepChanger implements EndTick {
     }
     
     private void autoJump() {
-    	boolean b = mc.options.autoJump;
-    	if(autoJumpState < 2 && b == true) {
-    		mc.options.autoJump=false;
-    	}else if(autoJumpState == 2 && b == false) {
-    		mc.options.autoJump=true;
+        SimpleOption<Boolean> option = mc.options.getAutoJump();
+    	boolean b = option.getValue();
+    	if (autoJumpState < 2 && b == true) {
+    		option.setValue(false);
+    	} else if (autoJumpState == 2 && b == false) {
+    		option.setValue(true);
     	}
     }
     
@@ -75,6 +77,6 @@ public final class StepChanger implements EndTick {
     	}else if(autoJumpState == 2) {
     		m = m + Formatting.GREEN + I18n.translate("mod.stepup.minecraft") + " " + I18n.translate("mod.stepup.autojump") + " " + I18n.translate("mod.stepup.enabled");
     	}
-        mc.player.sendMessage(new LiteralText(m), false);
+        mc.player.sendMessage(Text.literal(m), false);
     }
 }

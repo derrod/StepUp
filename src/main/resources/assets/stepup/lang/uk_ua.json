@@ -1,15 +1,15 @@
 {
     "mod.stepup.minecraft": "Vanilla",
-    "mod.stepup.autojump": "Auto Jump",
-    "mod.stepup.enabled": "Enabled",
-    "mod.stepup.disabled": "Disabled",
-    "mod.stepup.updateAvailable": "Update Available",
-    "mod.stepup.updateTooltip": "Click here to update from official website",
-    "key.categories.stepup": "StepUp",
-    "key.stepup.toggle": "Toggle",
-    "mod.stepup.config.default": "Default on new servers",
-    "mod.stepup.config.dostepup": "§aStepUp enabled",
-    "mod.stepup.config.nostepup": "§cStepUp disabled",
-    "mod.stepup.config.vanillajump": "§eUse Vanilla Auto Jump",
-    "mod.stepup.config.tt.onthisserver": "Stepup behavior on this server"
+    "mod.stepup.autojump": "Автострибок",
+    "mod.stepup.enabled": "Увімкнено",
+    "mod.stepup.disabled": "Вимкнено",
+    "mod.stepup.updateAvailable": "Доступне оновлення",
+    "mod.stepup.updateTooltip": "Натисніть тут, щоб оновити з офіційного сайту",
+    "key.categories.stepup": "Активізувати (StepUp)",
+    "key.stepup.toggle": "Переключити",
+    "mod.stepup.config.default": "За замовчуванням на нових серверах",
+    "mod.stepup.config.dostepup": "§aStepUp увімкнено",
+    "mod.stepup.config.nostepup": "§cStepUp вимкнено",
+    "mod.stepup.config.vanillajump": "§eВикористовуйте ванільний автострибок",
+    "mod.stepup.config.tt.onthisserver": "Підвищення поведінки на цьому сервері"
 }
