@@ -4,7 +4,7 @@
     "mod.stepup.enabled": "Activé",
     "mod.stepup.disabled": "Désactivé",
     "mod.stepup.updateAvailable": "Mise à jour disponible",
-    "mod.stepup.updateTooltip": "Cliquez ici pour mettre à jour à partir du site officiel",
+    "mod.stepup.updateTooltip": "Cliquez ici pour mettre à jour depuis le site officiel",
     "key.categories.stepup": "StepUp",
     "key.stepup.toggle": "Basculer",
     "mod.stepup.config.default": "Par défaut sur les nouveaux serveurs",
