@@ -5,11 +5,11 @@
     "mod.stepup.disabled": "Wyłączone",
     "mod.stepup.updateAvailable": "Aktualizacja dostępna",
     "mod.stepup.updateTooltip": "Kliknij tutaj, aby zaktualizować z oficjalnej strony",
-    "key.categories.stepup": "StepUp",
+    "key.categories.stepup": "KrokGórę",
     "key.stepup.toggle": "Przełącz",
     "mod.stepup.config.default": "Domyślne na nowych serwerach",
-    "mod.stepup.config.dostepup": "§aStepUp włączony",
-    "mod.stepup.config.nostepup": "§cStepUp wyłączony",
+    "mod.stepup.config.dostepup": "§aKrokGórę włączony",
+    "mod.stepup.config.nostepup": "§cKrokGórę wyłączony",
     "mod.stepup.config.vanillajump": "§eUżyj podstawowego Auto-skoku",
     "mod.stepup.config.tt.onthisserver": "Zachowanie modyfikacji na tym serwerze"
 }

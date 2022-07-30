@@ -9,7 +9,7 @@
     "key.stepup.toggle": "Переключить режим",
     "mod.stepup.config.default": "По умолчанию на новых серверах",
     "mod.stepup.config.dostepup": "§aStepUp включён",
-    "mod.stepup.config.nostepup": "§cStepUp отключён",
+    "mod.stepup.config.nostepup": "§cStepUp выключен",
     "mod.stepup.config.vanillajump": "§eИспользовать ванильный автопрыжок",
     "mod.stepup.config.tt.onthisserver": "Поведение StepUp на этом сервере"
 }
