@@ -1,6 +1,6 @@
 {
     "mod.stepup.minecraft": "原版",
-    "mod.stepup.autojump": "自动抬步",
+    "mod.stepup.autojump": "自动跳跃",
     "mod.stepup.enabled": "已启用",
     "mod.stepup.disabled": "已禁用",
     "mod.stepup.updateAvailable": "现有可用的更新",
@@ -8,8 +8,8 @@
     "key.categories.stepup": "抬步 (StepUp)",
     "key.stepup.toggle": "切换模式",
     "mod.stepup.config.default": "加入新服务器时默认设置",
-    "mod.stepup.config.dostepup": "自动抬步已启用",
+    "mod.stepup.config.dostepup": "自动跳跃已启用",
     "mod.stepup.config.nostepup": "自动跳跃已禁用",
-    "mod.stepup.config.vanillajump": "使用原版自动抬步",
-    "mod.stepup.config.tt.onthisserver": "在此服务器上使用自动抬步"
+    "mod.stepup.config.vanillajump": "使用原版自动跳跃",
+    "mod.stepup.config.tt.onthisserver": "在此服务器上使用自动跳跃"
 }

@@ -1,15 +1,15 @@
 {
-    "mod.stepup.minecraft": "Vanilla",
+    "mod.stepup.minecraft": "바닐라",
     "mod.stepup.autojump": "자동 점프",
     "mod.stepup.enabled": "활성화",
     "mod.stepup.disabled": "비활성화",
     "mod.stepup.updateAvailable": "업데이트 가능",
-    "mod.stepup.updateTooltip": "Click here to update from official website",
+    "mod.stepup.updateTooltip": "공식 웹사이트에서 업데이트 하려면 이곳을 누르세요",
     "key.categories.stepup": "StepUp",
     "key.stepup.toggle": "토글",
-    "mod.stepup.config.default": "Default on new servers",
-    "mod.stepup.config.dostepup": "§aStepUp enabled",
-    "mod.stepup.config.nostepup": "§cStepUp disabled",
-    "mod.stepup.config.vanillajump": "§eUse Vanilla Auto Jump",
-    "mod.stepup.config.tt.onthisserver": "Stepup behavior on this server"
+    "mod.stepup.config.default": "새 서버에서의 기본값",
+    "mod.stepup.config.dostepup": "§aStepUp 활성화",
+    "mod.stepup.config.nostepup": "§cStepUp 비활성화",
+    "mod.stepup.config.vanillajump": "§e바닐라 자동 점프 사용",
+    "mod.stepup.config.tt.onthisserver": "서버에서 Stepup을 사용하는 방식을 설정할 수 있습니다."
 }
