@@ -8,8 +8,8 @@
     "key.categories.stepup": "YüksekAdım",
     "key.stepup.toggle": "Aç/Kapat",
     "mod.stepup.config.default": "Yeni sunucularda varsayılan olarak aç",
-    "mod.stepup.config.dostepup": "§aStepUp etkinleştirildi",
-    "mod.stepup.config.nostepup": "§cStepUp devre dışı bırakıldı",
+    "mod.stepup.config.dostepup": "§aAdımAt etkinleştirildi",
+    "mod.stepup.config.nostepup": "§cAdımAt devre dışı bırakıldı",
     "mod.stepup.config.vanillajump": "§eVanilla Otomatik Zıplamayı Kullan",
-    "mod.stepup.config.tt.onthisserver": "Bu sunucudaki Stepup davranışı"
+    "mod.stepup.config.tt.onthisserver": "Bu sunucudaki AdımAt davranışı"
 }

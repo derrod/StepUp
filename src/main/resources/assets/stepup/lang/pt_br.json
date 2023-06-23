@@ -10,6 +10,6 @@
     "mod.stepup.config.default": "Padrão em novos servidores",
     "mod.stepup.config.dostepup": "§aStepUp ativado",
     "mod.stepup.config.nostepup": "§cStepUp desativado",
-    "mod.stepup.config.vanillajump": "§eUsar Pulo Automático do Vanilla",
+    "mod.stepup.config.vanillajump": "§eUsar pulo automático do Vanilla",
     "mod.stepup.config.tt.onthisserver": "Comportamento do StepUp neste servidor"
 }

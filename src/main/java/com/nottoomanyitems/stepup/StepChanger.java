@@ -36,7 +36,7 @@ public final class StepChanger implements EndTick {
         if(player.isSneaking()) {
         	player.setStepHeight(.6f);
         } else if(autoJumpState == 0 && player.getStepHeight() < 1.0f){
-        	player.setStepHeight(.25f);
+        	player.setStepHeight(1.25f);
         } else if(autoJumpState == 1 && player.getStepHeight() >= 1.0f){
         	player.setStepHeight(.6f);
         } else if(autoJumpState == 2 && player.getStepHeight() >= 1.0f){
