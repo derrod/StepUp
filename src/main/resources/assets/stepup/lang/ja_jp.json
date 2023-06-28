@@ -1,15 +1,15 @@
 {
-    "mod.stepup.minecraft": "Vanilla",
-    "mod.stepup.autojump": "Auto Jump",
-    "mod.stepup.enabled": "Enabled",
-    "mod.stepup.disabled": "Disabled",
-    "mod.stepup.updateAvailable": "Update Available",
-    "mod.stepup.updateTooltip": "Click here to update from official website",
+    "mod.stepup.minecraft": "バニラ",
+    "mod.stepup.autojump": "オートジャンプ",
+    "mod.stepup.enabled": "有効",
+    "mod.stepup.disabled": "無効",
+    "mod.stepup.updateAvailable": "利用可能な更新があります",
+    "mod.stepup.updateTooltip": "公式ウェブサイトから更新するにはここをクリック",
     "key.categories.stepup": "StepUp",
-    "key.stepup.toggle": "Toggle",
-    "mod.stepup.config.default": "Default on new servers",
-    "mod.stepup.config.dostepup": "§aStepUp enabled",
-    "mod.stepup.config.nostepup": "§cStepUp disabled",
-    "mod.stepup.config.vanillajump": "§eUse Vanilla Auto Jump",
-    "mod.stepup.config.tt.onthisserver": "Stepup behavior on this server"
+    "key.stepup.toggle": "モード切替え",
+    "mod.stepup.config.default": "新しいサーバーでのデフォルト",
+    "mod.stepup.config.dostepup": "§aStepUp は有効です",
+    "mod.stepup.config.nostepup": "§cStepUp は無効です",
+    "mod.stepup.config.vanillajump": "§eオートジャンプを使う",
+    "mod.stepup.config.tt.onthisserver": "このサーバーでのステップアップを使用する"
 }
