@@ -17,7 +17,8 @@
       	"mixins.stepup.json"
     ],
     "depends": {
-      "fabric": "*"
+      "fabri-api": "*",
+      "gbfabrictools": ">=1.4+1.20"
     },
     "recommends": {
         "modmenu" : "*"
