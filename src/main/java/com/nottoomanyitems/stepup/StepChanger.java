@@ -10,13 +10,23 @@ import net.minecraft.client.resource.language.I18n;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.Identifier;
+import net.minecraft.entity.attribute.EntityAttribute;
+import net.minecraft.entity.attribute.EntityAttributeInstance;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.entry.RegistryEntry;
 import static org.lwjgl.glfw.GLFW.GLFW_KEY_J;
+
+import java.rmi.registry.Registry;
 
 public final class StepChanger implements EndTick {
     public KeyBinding myKey;
     public static int autoJumpState = -1; //0 StepUp, 1 None, 2 Minecraft
     public static boolean firstRun = true;
     public static String serverName;
+
+    private static Identifier stepHeightIdent = new Identifier("minecraft:generic.step_height");
+    private static RegistryEntry<EntityAttribute> stepHeightAttr = Registries.ATTRIBUTE.getEntry(stepHeightIdent).get();
     
     private MinecraftClient mc;
 
@@ -33,14 +43,17 @@ public final class StepChanger implements EndTick {
         if (player==null)
             return;
         processKeyBinds();
+
+        EntityAttributeInstance attr = player.getAttributeInstance(stepHeightAttr);
+
         if(player.isSneaking()) {
-        	player.setStepHeight(.6f);
+        	attr.setBaseValue(.6f);
         } else if(autoJumpState == 0 && player.getStepHeight() < 1.0f){
-        	player.setStepHeight(1.25f);
+        	attr.setBaseValue(1.25f);
         } else if(autoJumpState == 1 && player.getStepHeight() >= 1.0f){
-        	player.setStepHeight(.6f);
+        	attr.setBaseValue(.6f);
         } else if(autoJumpState == 2 && player.getStepHeight() >= 1.0f){
-        	player.setStepHeight(.6f);
+        	attr.setBaseValue(.6f);
         }
         autoJump();
 
