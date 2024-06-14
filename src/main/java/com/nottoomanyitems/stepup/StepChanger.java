@@ -25,7 +25,7 @@ public final class StepChanger implements EndTick {
     public static boolean firstRun = true;
     public static String serverName;
 
-    private static Identifier stepHeightIdent = new Identifier("minecraft:generic.step_height");
+    private static Identifier stepHeightIdent = Identifier.of("minecraft", "generic.step_height");
     private static RegistryEntry<EntityAttribute> stepHeightAttr = Registries.ATTRIBUTE.getEntry(stepHeightIdent).get();
     
     private MinecraftClient mc;

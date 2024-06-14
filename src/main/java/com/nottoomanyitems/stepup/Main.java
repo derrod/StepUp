@@ -1,6 +1,5 @@
 package com.nottoomanyitems.stepup;
 
-import de.guntram.mcmod.crowdintranslate.CrowdinTranslate;
 import de.guntram.mcmod.fabrictools.ConfigurationProvider;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
@@ -12,7 +11,6 @@ public class Main implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        CrowdinTranslate.downloadTranslations(MODID);
         ConfigurationProvider.register(MODNAME, new ConfigHandler());
         ConfigHandler.load(ConfigurationProvider.getSuggestedFile(MODID));
         StepChanger stepChanger = new StepChanger();
