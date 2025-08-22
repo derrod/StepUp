@@ -1,16 +1,37 @@
 package com.nottoomanyitems.stepup;
 
-import com.nottoomanyitems.stepup.mixins.NetHandler;
-import de.guntram.mcmod.rifttools.ConfigChangedEvent;
-import de.guntram.mcmod.rifttools.Configuration;
-import de.guntram.mcmod.rifttools.ModConfigurationHandler;
+import de.guntram.mcmod.fabrictools.ConfigChangedEvent;
+import de.guntram.mcmod.fabrictools.Configuration;
+import de.guntram.mcmod.fabrictools.ModConfigurationHandler;
 import java.io.File;
+import java.util.List;
 
 public class ConfigHandler implements ModConfigurationHandler {
     public static Configuration config;
+    public static final String[] stepupKeys = {
+        "mod.stepup.config.dostepup",
+        "mod.stepup.config.nostepup",
+        "mod.stepup.config.vanillajump"
+    };
 
     public static void load(File file) {
         config = new Configuration(file);
+        
+        // make sure a default entry exists
+        getDefaultConfigValue();
+        // Port old config format, which used ints, to the new selection list format
+        boolean needToSave = false;
+        List<String> presentServers = config.getKeys();
+        for (String serverName: presentServers) {
+            if (!config.isSelectList(serverName)) {
+                int oldValue = (int) (double) config.getValue(serverName);
+                config.getSelection(serverName, Configuration.CATEGORY_CLIENT, oldValue, stepupKeys, "mod.stepup.config.tt.onthisserver");
+                needToSave = true;
+            }
+        }
+        if (needToSave) {
+            config.save();
+        }
     }
 
     public static void reloadConfig() {
@@ -19,15 +40,21 @@ public class ConfigHandler implements ModConfigurationHandler {
         }
     }
 
-    public static void loadConfig() {
-    	StepChanger.autoJumpState = config.getInt(StepChanger.serverIP,
-                Configuration.CATEGORY_CLIENT, 0, 0, 2, "autoJump state on this server");
-        System.out.println("setting state on "+StepChanger.serverIP+" to "+StepChanger.autoJumpState);
+    public static void loadConfigForServer(String serverName) {
+        int defaultState;
+        defaultState = getDefaultConfigValue();
+    	StepChanger.autoJumpState = config.getSelection(serverName,
+                Configuration.CATEGORY_CLIENT, defaultState, stepupKeys, "mod.stepup.config.tt.onthisserver");
+        System.out.println("setting state on "+serverName+" to "+StepChanger.autoJumpState);
         ConfigHandler.reloadConfig();
+    }
+    
+    public static int getDefaultConfigValue() {
+        return config.getSelection("mod.stepup.config.default", Configuration.CATEGORY_CLIENT, 0, stepupKeys, "");
     }
 
     public static void changeConfig() {
-        config.setValue(StepChanger.serverIP, StepChanger.autoJumpState);
+        config.setValue(StepChanger.serverName, StepChanger.autoJumpState);
         ConfigHandler.reloadConfig();
     }
 
@@ -43,4 +70,3 @@ public class ConfigHandler implements ModConfigurationHandler {
         return config;
     }
 }
-

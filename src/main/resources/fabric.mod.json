@@ -1,0 +1,35 @@
+{
+    "schemaVersion": 1,
+    "id": "stepup",
+    "version": "${version}",
+    "environment": "client",
+    "entrypoints": {
+        "client": [ "com.nottoomanyitems.stepup.Main" ],
+        "modmenu": [ "com.nottoomanyitems.stepup.MMConfigurationHandler" ]
+    },
+    "custom": {
+        "modupdater": {
+            "strategy": "json",
+            "url": "https://raw.githubusercontent.com/gbl/ModVersionInfo/master/StepUp.json"
+        }
+    },
+    "mixins": [
+      	"mixins.stepup.json"
+    ],
+    "depends": {
+      "fabric-api": "*",
+      "gbfabrictools": ">=1.4+1.20"
+    },
+    "recommends": {
+        "modmenu" : "*"
+    },
+    "name": "StepUp",
+    "description": "Quickly switch betwenn autojump and different step heights",
+    "icon": "icon.png",
+    "authors": [ "NotTooManyItems", "Giselbaer" ],
+    "contact": {
+        "homepage": "https://www.curseforge.com/minecraft/mc-mods/stepupnext",
+        "sources": "https://github.com/gbl/StepUp",
+        "issues": "https://github.com/gbl/StepUp/issues"
+    }
+}
