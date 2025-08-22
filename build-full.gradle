@@ -1,0 +1,90 @@
+buildscript {
+    dependencies {
+        classpath 'de.guntram.mcmod:crowdin-translate:1.4+1.19.3'
+    }
+    repositories {
+        maven {
+            name = 'CrowdinTranslate source'
+            url = "https://minecraft.guntram.de/maven/"
+        }
+    }
+}
+
+plugins {
+    id 'fabric-loom' version '1.4.9'
+    id 'maven-publish'
+}
+
+apply plugin: 'de.guntram.mcmod.crowdin-translate'
+crowdintranslate.crowdinProjectName = 'stepup'
+
+repositories {
+    maven {
+        url = "file:/tmp/mymavenrepo/"
+    }
+    maven {
+        url = "https://maven.fabricmc.net/"
+    }
+    maven {
+        url = "https://minecraft.guntram.de/maven/"
+    }
+    maven {
+        url = "https://maven.terraformersmc.com/releases/"
+    }
+    maven { url "https://maven.shedaniel.me/" }
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+    withSourcesJar()
+}
+
+ext.Versions = new Properties()
+Versions.load(file("Versionfiles/mcversion-1.20.8.properties").newReader())
+
+archivesBaseName = "stepup"
+ext.projectVersion = "1.4"
+
+version = "${Versions['minecraft_version']}-fabric${Versions['fabric_versiononly']}-${project.projectVersion}"
+
+loom {
+    mixin.defaultRefmapName = "StepUp-refmap.json";
+}
+
+processResources {
+    inputs.property "version", project.version
+
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
+}
+
+dependencies {
+    minecraft  "com.mojang:minecraft:${Versions['minecraft_version']}"
+    mappings   "net.fabricmc:yarn:${Versions['yarn_mappings']}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${Versions['loader_version']}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${Versions['fabric_version']}"
+    modImplementation "com.terraformersmc:modmenu:${Versions['modmenu_version']}"
+    modImplementation "de.guntram.mcmod:GBfabrictools:${Versions['gbfabrictools_version']}"
+    include    "de.guntram.mcmod:GBfabrictools:${Versions['gbfabrictools_version']}"
+}
+
+jar {
+    from "LICENSE"
+}
+
+build {
+    dependsOn downloadTranslations
+}
+
+// Task for displaying version information
+task versionInfo {
+    doLast {
+        println "Building StepUp for Minecraft ${Versions['minecraft_version']}"
+        println "Version: ${project.version}"
+        println "Fabric Version: ${Versions['fabric_versiononly']}"
+        println "Loader Version: ${Versions['loader_version']}"
+        println "Fabric API Version: ${Versions['fabric_version']}"
+    }
+}
